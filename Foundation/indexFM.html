@@ -1,0 +1,132 @@
+<!doctype html>
+<html class="no-js" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Freak Math</title>
+    <link rel="stylesheet" href="css/foundation.css" />
+    <link rel="stylesheet" href="style.css" />
+    <script src="js/vendor/modernizr.js"></script>
+  </head>
+  <body>
+  	<header>
+  		<div class="row">
+  			<div class="large-3 large-centered columns" align="center">
+  				<form>
+  					<input type="text" id="FirstName" name="FirstName" placeholder="Username" />
+  					<input type="text" id="LastName" name="LastName" placeholder="Password" />
+  					<a href="#" class="button" onclick="login()">Login</a><br>
+  				</form>
+  			</div>
+  		</div>
+	</header>
+	<div class="row">
+  			<div class="large-8 large-centered columns" align="center">
+  				<form>
+  					<h1 class="pheptoan"><span id="demox">x</span>+<span id="demoy">y</span>=<span id="demoscore">z</span></h1>
+  				</form>
+  			</div>
+  	</div>
+  	<div class="row">
+  		<div class="large-8 large-centered columns" align="center">
+  			<div class="row">
+  				<div class="small-6 columns">
+  					<a href="#" onclick="btnDung()"><img src="images/icon-tick.jpg" height="100" width="100"></img></a>
+  					<button onclick="myFunction()">Bắt Đầu</button>
+  				</div>
+  			 	<div class="small-6 columns">
+  			 		<a href="#" onclick="btnSai()"><img src="images/images.jpg" height="100" width="100"></img></a>
+  			 	</div>
+  			</div>
+  		</div>
+  	</div>
+  	<footer>
+  		<span class='st_facebook_large' displayText='Facebook'></span>
+		<span class='st_twitter_large' displayText='Tweet'></span>
+		<span class='st_googleplus_large' displayText='Google +'></span>
+  	</footer>
+  	<!-- start share -->
+  	<script type="text/javascript" src="http://w.sharethis.com/button/buttons.js"></script>
+	<script type="text/javascript">stLight.options({publisher: "b70f38e1-cfb5-4aa9-9457-82a9da836222", doNotHash: false, doNotCopy: false, hashAddressBar: false});</script>
+  	<!-- end share -->
+  	<!-- start random -->
+  	<script>
+  		var n;
+  		var score;
+		function myFunction()
+			{
+			var x=document.getElementById("demox")
+			x.innerHTML=Math.floor((Math.random()*10)+1);
+			var y=document.getElementById("demoy")
+			y.innerHTML=Math.floor((Math.random()*10)+1);
+			  
+			
+			n= parseInt(x.innerHTML) + parseInt(y.innerHTML);
+
+			var m;
+			m=Math.floor((Math.random()*3)+1);
+			var g;
+			g=parseInt(n)+parseInt(m)
+			  
+			var myArray = [n,g];
+			score =document.getElementById("demoscore")
+			score.innerHTML = myArray[Math.floor(Math.random() * myArray.length)];
+
+			}
+			function btnDung(){
+			
+				var kq = n;
+				if (kq==score.innerHTML) {
+					alert("Bạn trả lời đúng");
+					myFunction();
+				}else
+				{
+					alert("bạn trả lời sai");
+					myFunction();
+				}
+
+			}
+			function btnSai(){
+				var kq = n;
+				if (kq != score.innerHTML) {
+					alert("Bạn trả lời đúng");
+					myFunction();
+				}else
+				{
+					alert("bạn trả lời sai");
+					myFunction();
+				}	
+			} 
+		function login()
+		{
+			var a=document.getElementById("FirstName").value;
+			var b=document.getElementById("LastName").value;
+			var keyname='xxx';
+			localStorage.setItem(keyname,a);
+			document.getElementById("FirstName").innerHTML=localStorage.getItem(keyname);
+
+			// var name = 'FirstName';  
+			// var value = localStorage.getItem(name) || $.cookie(name);  
+			// var func = function() {  
+			//         if (Modernizr.localstorage) {  
+			//             localStorage.setItem(name, a)  
+			//         } else {  
+			//             $.cookie(name, a, {  
+			//                 expires: 365  
+			//             });  
+			//         }  
+			//     };  
+			// if(value == null) {  
+			//     introJs().start().oncomplete(func).onexit(func);  
+			// };
+
+		}
+		</script>
+  	<!-- end random -->
+    <script src="js/vendor/jquery.js"></script>
+    <script src="js/foundation.min.js"></script>
+    <script>
+      $(document).foundation();
+    </script>
+  </body>
+</html>
