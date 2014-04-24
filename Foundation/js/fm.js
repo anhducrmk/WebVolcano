@@ -2,6 +2,7 @@
   		var score;
   		var sumscore=0;
   		var myTimeout;
+
   		document.getElementById("truebutton").disabled=true;
   		document.getElementById("falsebutton").disabled=true;
 		function myFunction()
@@ -27,14 +28,15 @@
 				document.getElementById("actionbutton").disabled=true;
 				document.getElementById("truebutton").disabled=false;
   				document.getElementById("falsebutton").disabled=false;
+  				
+  				progressBarSim(0);				
   			
 			}
 
 			function dung()
 			{
-
-					alert("Bạn trả lời đúng");
 					sumscore++;
+					alert("Bạn trả lời đúng");					
 					myFunction();
 					var hhh =document.getElementById("tongdiem");
 					hhh.innerHTML=sumscore;
@@ -48,9 +50,8 @@
 					hhh.innerHTML=sumscore;
 			}
 			function btnDung(){	
-
-				clearTimeout(myTimeout);	
-				
+				progressBarSim(0);	
+				clearTimeout(myTimeout);					
 				var kq = n;
 				if (kq==score.innerHTML) {
 					dung();									
@@ -61,6 +62,7 @@
 
 			}
 			function btnSai(){
+				progressBarSim(0);	
 				clearTimeout(myTimeout);
 				var kq = n;
 				if (kq != score.innerHTML) {
@@ -95,5 +97,23 @@
 			// };
 
 		}
+
+		function progressBarSim(al) {
+		 var bar = document.getElementById('progressBar');
+		 var status = document.getElementById('status');
+		 //status.innerHTML = al+"%";
+		 bar.value = al;
+		 al++;
+		    var sim = setTimeout("progressBarSim("+al+")",50);
+		    if(al == 100){
+		     // status.innerHTML = "100%";
+		      bar.value = 100;
+		      clearTimeout(sim);
+		      // var finalMessage = document.getElementById('finalMessage');
+		      // finalMessage.innerHTML = "Process is complete";
+		    }
+		}
+		// var amountLoaded = 0;
+		// progressBarSim(amountLoaded);
 
 
