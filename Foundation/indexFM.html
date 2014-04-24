@@ -23,6 +23,7 @@
 	<div class="row">
   			<div class="large-8 large-centered columns" align="center">
   				<form>
+
   					<h1 class="pheptoan"><span id="demox">x</span>+<span id="demoy">y</span>=<span id="demoscore">z</span></h1>
 
   					Score : <span id="tongdiem">0</span>
@@ -32,12 +33,9 @@
   	<div class="row">
   		<div class="large-8 large-centered columns" align="center">
   			<div class="row">
-  				<div class="small-6 columns">
-  					<a href="#" onclick="btnDung()"><img src="images/icon-tick.jpg" height="100" width="100"></img></a>
-  					<button onclick="myFunction()">Action</button>
-  				</div>
-  			 	<div class="small-6 columns">
-  			 		<a href="#" onclick="btnSai()"><img src="images/images.jpg" height="100" width="100"></img></a>
+  					<img src="img/v1.png" onclick="btnDung()" id="truebutton"></img>
+  					<button onclick="myFunction()" id="actionbutton">Action</button>
+  			 		<img src="img/sai1.png" onclick="btnSai()" id="falsebutton"></img>
   			 	</div>
   			</div>
   		</div>
@@ -58,6 +56,7 @@
     <script src="js/foundation.min.js"></script>
     <script>
       $(document).foundation();
+      
     </script>
   </body>
 </html>
