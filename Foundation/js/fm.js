@@ -80,7 +80,7 @@
 			var keyname='xxx';
 			localStorage.setItem(keyname,a);
 			document.getElementById("FirstName").innerHTML=localStorage.getItem(keyname);
-
+//
 			// var name = 'FirstName';  
 			// var value = localStorage.getItem(name) || $.cookie(name);  
 			// var func = function() {  
