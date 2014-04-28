@@ -11,35 +11,45 @@
   <body>
   	<header>
   		<div class="row">
-  			<div class="large-3 large-centered columns" align="center">
+  			<div class="large-4 large-centered columns" align="center">
+  				<img src="images/FreakingMath.png" height="150" width="150">
+  			</div>
+  			<div class="large-3 columns login" align="center">
   				<form>
-  					<input type="text" id="FirstName" name="FirstName" placeholder="Username" />
-  					<input type="text" id="LastName" name="LastName" placeholder="Password" />
-  					<a href="#" class="button" onclick="login()">Login</a><br>
+  					<input class="typeahead" type="text tiny round" id="FirstName" name="FirstName" placeholder="Username" /><br><br>
+  					<input type="text tiny round" id="LastName" name="LastName" placeholder="Password" /><br><br>
+  					<a href="#" class="tiny button round" onclick="login()">Login</a><br>
   				</form>
-  				<progress id="progressBar" value="0" max="100" style="width:300px;"></progress>
-  				<!-- 
-				<span id="status"></span>
-				<h1 id="finalMessage"></h1> -->
   			</div>
   		</div>
 	</header>
 	<div class="row">
   			<div class="large-8 large-centered columns" align="center">
+  		<!-- start progress bar -->
+  				<progress id="progressBar" value="0" max="100" style="width:300px;"></progress>
+				</div>
+		<!-- end progress bar -->
+			<!-- start  -->
+	<div class="row">
+  			<div class="large-8 large-centered columns" align="center">
   				<form>
-
-  					<h1 class="pheptoan"><span id="demox">x</span>+<span id="demoy">y</span>=<span id="demoscore">z</span></h1>
-
-  					Score : <span id="tongdiem">0</span>
+  					<h1 class="expression"><span id="demox">x</span>+<span id="demoy">y</span>=<span id="demoscore">z</span></h1>
   				</form>
   			</div>
   	</div>
   	<div class="row">
   		<div class="large-8 large-centered columns" align="center">
   			<div class="row">
-  					<img src="img/v1.png" onclick="btnDung()" id="truebutton"></img>
-  					<button onclick="myFunction()" id="actionbutton">Action</button>
-  			 		<img src="img/sai1.png" onclick="btnSai()" id="falsebutton"></img>
+	  			<div class="small-4 columns">
+	  					<a><img id="truebutton" onclick="btntick()" src="images/tick.png"></a>
+	  			</div>
+	  			<div class="small-4 columns">
+	  					Score :<span id = "totalScore">0</span><br><br>
+	  			 		<button onclick="myFunction()" id="actionbutton">Action</button>
+	  			 </div>
+	  			 <div class="small-4 columns">
+	  			 		<a><img id="falsebutton" onclick="btncross()" src="images/cross.png"></a>
+	  			 </div>
   			 	</div>
   			</div>
   		</div>
@@ -49,7 +59,7 @@
 		<span class='st_twitter_large' displayText='Tweet'></span>
 		<span class='st_googleplus_large' displayText='Google +'></span>
   	</footer>
-  	<!-- start shares -->
+  	<!-- start share -->
   	<script type="text/javascript" src="http://w.sharethis.com/button/buttons.js"></script>
 	<script type="text/javascript">stLight.options({publisher: "b70f38e1-cfb5-4aa9-9457-82a9da836222", doNotHash: false, doNotCopy: false, hashAddressBar: false});</script>
   	<!-- end share -->
@@ -60,7 +70,6 @@
     <script src="js/foundation.min.js"></script>
     <script>
       $(document).foundation();
-      
     </script>
   </body>
 </html>

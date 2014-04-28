@@ -2,118 +2,96 @@
   		var score;
   		var sumscore=0;
   		var myTimeout;
-
+  		// disable button  true and false when start game
   		document.getElementById("truebutton").disabled=true;
   		document.getElementById("falsebutton").disabled=true;
+  		// Random function
 		function myFunction()
 			{
-				myTimeout=setTimeout(function(){alert("bạn đã thua vì hết thời gian");
-					document.documentElement.innerHTML =document.location.href="http://localhost:8888/Foundation/indexFM.html";},5000);
+				// set time for questions
+			myTimeout=setTimeout(function(){alert("bạn đã thua vì hết thời gian");
+				//Refresh the website
+			document.documentElement.innerHTML =document.location.href="file:///G:/xampp/htdocs/Fm/Foundation/indexFM.html";},5000);
+				//random number
 			var x=document.getElementById("demox")
 			x.innerHTML=Math.floor((Math.random()*10)+1);
 			var y=document.getElementById("demoy")
 			y.innerHTML=Math.floor((Math.random()*10)+1);
-			  
-			
+				//result		  			
 			n= parseInt(x.innerHTML) + parseInt(y.innerHTML);
-
 			var m;
 			m=Math.floor((Math.random()*6)-3);
 			var g;
-			g=parseInt(n)+parseInt(m)
-			  	
+			g=parseInt(n)+parseInt(m)			  	
 			var myArray = [n,g];
 			score =document.getElementById("demoscore")
-			score.innerHTML = myArray[Math.floor(Math.random() * myArray.length)];			
-				document.getElementById("actionbutton").disabled=true;
-				document.getElementById("truebutton").disabled=false;
-  				document.getElementById("falsebutton").disabled=false;
-  				
-  				progressBarSim(0);				
-  			
+			score.innerHTML = myArray[Math.floor(Math.random() * myArray.length)];
+			//enable buttons			
+			document.getElementById("actionbutton").disabled=true;
+			document.getElementById("truebutton").disabled=false;
+  			document.getElementById("falsebutton").disabled=false;
+  			// timeline status
+  			progressBarSim(0);	
 			}
-
-			function dung()
+			//retrive result
+			function tick()
 			{
+					alert("Bạn trả lời đúng");
 					sumscore++;
-					alert("Bạn trả lời đúng");					
 					myFunction();
-					var hhh =document.getElementById("tongdiem");
-					hhh.innerHTML=sumscore;
+					var hhh =document.getElementById("totalScore");
+					hhh.innerHTML=sumscore;	
 			}
-			function sai()
+			function cross()
 			{
 					alert("bạn trả lời sai");
 					myFunction();
 					sumscore=0;
-					var hhh =document.getElementById("tongdiem");
-					hhh.innerHTML=sumscore;
+					var hhh =document.getElementById("totalScore");
+					hhh.innerHTML=sumscore;	
 			}
-			function btnDung(){	
-				progressBarSim(0);	
-				clearTimeout(myTimeout);					
+
+
+			//click events
+			function btntick(){
+
+				progressBarSim(0);
+				// reset time for question	
+				clearTimeout(myTimeout);			
 				var kq = n;
 				if (kq==score.innerHTML) {
-					dung();									
+					tick();									
 				}else
 				{
-					sai();
+					cross();
 				}
 
 			}
-			function btnSai(){
+			function btncross(){
 				progressBarSim(0);	
 				clearTimeout(myTimeout);
 				var kq = n;
 				if (kq != score.innerHTML) {
-					dung();	
+					tick();	
 				}else
 				{
-					sai();
+					cross();
 				}	
 			}
-			
+			// local storage for textbox
 		function login()
 		{
-			var a=document.getElementById("FirstName").value;
-			var b=document.getElementById("LastName").value;
-			var keyname='xxx';
-			localStorage.setItem(keyname,a);
-			document.getElementById("FirstName").innerHTML=localStorage.getItem(keyname);
-//
-			// var name = 'FirstName';  
-			// var value = localStorage.getItem(name) || $.cookie(name);  
-			// var func = function() {  
-			//         if (Modernizr.localstorage) {  
-			//             localStorage.setItem(name, a)  
-			//         } else {  
-			//             $.cookie(name, a, {  
-			//                 expires: 365  
-			//             });  
-			//         }  
-			//     };  
-			// if(value == null) {  
-			//     introJs().start().oncomplete(func).onexit(func);  
-			// };
-
+			localStorage.xxx=document.getElementById("FirstName").value;
+			document.getElementById("FirstName").innerHTML=localStorage.xxx;
 		}
-
+		// Function Progress bar
 		function progressBarSim(al) {
-		 var bar = document.getElementById('progressBar');
-		 var status = document.getElementById('status');
-		 //status.innerHTML = al+"%";
-		 bar.value = al;
-		 al++;
-		    var sim = setTimeout("progressBarSim("+al+")",50);
-		    if(al == 100){
-		     // status.innerHTML = "100%";
-		      bar.value = 100;
-		      clearTimeout(sim);
-		      // var finalMessage = document.getElementById('finalMessage');
-		      // finalMessage.innerHTML = "Process is complete";
+			 var bar = document.getElementById('progressBar');			 
+			 bar.value = al;
+			 al++;
+			    var sim = setTimeout("progressBarSim("+al+")",50);
+			    if(al == 100){
+			      bar.value = 100;
+			      clearTimeout(sim);
 		    }
 		}
-		// var amountLoaded = 0;
-		// progressBarSim(amountLoaded);
-
-
