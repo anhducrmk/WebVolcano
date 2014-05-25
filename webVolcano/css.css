@@ -1,0 +1,267 @@
+.backgroundOurWork {
+	background-image:url("img/bg1.png");
+}
+.backgroundContact {
+	background-image:url("img/bg2.png");
+}
+.content {
+	margin-top: 20px;
+	width: 960px;
+}
+.grild {
+	padding:2px 10px;
+}
+.round {
+	border-radius: 10px;	
+}
+.menu {
+	background-color: #373737;
+}
+.navbar .nav {
+  float:none;
+  display:inline-block;
+  vertical-align: top;
+}
+li {
+	display: inline-block;
+	height: 120px;
+	padding: 30px 15px;
+	text-align: center;
+	font-size: 24px;
+	font-family: Diavlo MEDIUM;
+	text-transform: uppercase;
+	width: 20%;
+}
+.navbar-inverse .navbar-nav > li > a {
+
+    color: #FFF;
+    width: 100%;
+}
+.menuli:hover {
+	background-color: #B42D2D;
+}
+
+
+footer{
+	background: #373737;
+	color: #FFF;
+}
+.contact-form {
+    margin-top:70px;
+}
+.menubar
+{
+	text-align: center;
+	width: 960px;
+	
+}
+.textmenu
+{
+	padding-top: 10px;
+	border-style: red;
+	color: white;
+	font-size: 30px;
+	height: 120px;
+}
+
+.what-we-do
+{
+	padding-top: 120px;
+	text-align: center;
+	background-color: #373737;
+	position: relative;
+	z-index: 999;
+}
+.bg-orange
+{
+	height: 180px;
+	width: 100%;
+	display: inline-block;
+	position: absolute;
+	bottom: 0px;
+	left: 0px;
+	background: none repeat scroll 0% 0% #B45F2D;
+	z-index: -1;
+}
+.volcano
+{
+	text-align: center;
+	font-size: 38px;
+	color: #B42D2D;
+}
+
+.content1{
+    width: 960px;
+}
+
+.web1
+{	
+	margin-left: -465px;
+}
+.web2
+{
+	margin-left: -145px;
+}
+.web3
+{
+	margin-left: 175px;
+}
+.web
+{
+	width: 300px;
+	height: 100px;
+	display: inline-block;
+	border-radius: 10px;
+	background: none repeat scroll 0% 0% #FFE182;
+	color: #373737;
+	text-decoration: none;
+	font-size: 20px;
+	padding-top: 30px;
+	position: absolute;
+	bottom: 35px;
+	left: 50%;
+	cursor: pointer;
+	z-index: 99;
+}
+
+.text1
+{
+	top: 320px;
+	margin-left: -195px;
+}
+.text2
+{
+	top: 255px;
+	margin-left: -45px;
+}
+
+.text3
+{
+	top: 290px;
+	margin-left: 105px;
+}
+
+.text
+{
+	text-decoration: none;
+	font-size: 18px;
+	color: #FFE182;
+	position: absolute;
+	left: 50%;
+	width: 100px;
+	text-align: center;
+}
+
+.magma
+{
+	position: absolute;
+	bottom: 0px;
+	left: 50%;
+	margin-left: -468px;
+}
+
+.ngan1
+{
+	height: 60px;
+	background-image: -webkit-gradient(linear, 0% top, 100% top, from(#B45F2D), to(#B4462D));
+  background-image: -webkit-linear-gradient(top, color-stop(#B45F2D 0%), color-stop(#B4462D 100%));
+  background-image: -moz-linear-gradient(top, #B45F2D 0%, #B4462D 100%);
+  
+}
+
+.who-we-are
+{
+	height: 560px;
+	background: none repeat scroll 0% 0% #B4412D;
+}
+.imgweare
+{
+	z-index: 1;
+	position: absolute;
+}
+p
+{
+	font-size: 20px;
+	color: white;
+	text-align: center;
+	padding-top: 40px;
+}
+.member1
+{
+	z-index: 3;
+	top: 200px;
+	left: 10px;
+}
+.member2 {
+    top: 360px;
+    left: 750px;
+}
+
+.member3 {
+    z-index: 3;
+    top: 240px;
+    left: 670px;
+}
+
+.member4 {
+    z-index: 3;
+    top: 410px;
+    left: 90px;
+}
+
+.member5 {
+    z-index: 3;
+    top: 300px;
+    left: 250px;
+}
+
+.member6 {
+    z-index: 3;
+    top: 180px;
+    left: 350px;
+}
+
+.member7 {
+    z-index: 3;
+    top: 400px;
+    left: 420px;
+}
+
+.member8 {
+    z-index: 3;
+    top: 260px;
+    left: 510px;
+}
+
+.member9 {
+    z-index: 3;
+    top: 200px;
+    left: 830px;
+}
+
+.ngan2
+{
+	height: 60px;
+	background-image: -webkit-gradient(linear, 0% top, 100% top, from(#B43C2D), to(#B42D2D));
+  background-image: -webkit-linear-gradient(top, color-stop(#B43C2D 0%), color-stop(#B42D2D 100%));
+  background-image: -moz-linear-gradient(top, #B43C2D 0%, #B42D2D 100%);
+  
+}
+
+.ngan3
+{
+	height: 60px;
+	background-image: -webkit-gradient(linear, 0% top, 100% top, from(#B42D2D), to(#7D2828));
+  background-image: -webkit-linear-gradient(top, color-stop(#B42D2D 0%), color-stop(#7D2828 100%));
+  background-image: -moz-linear-gradient(top, #B42D2D 0%, #7D2828 100%);
+  
+}
+
+.ngan4
+{
+	height: 60px;
+	background-image: -webkit-gradient(linear, 0% top, 100% top, from(#7D2828), to(#553232));
+  background-image: -webkit-linear-gradient(top, color-stop(#7D2828 0%), color-stop(#553232 100%));
+  background-image: -moz-linear-gradient(top, #7D2828 0%, #553232 100%);
+  
+}
