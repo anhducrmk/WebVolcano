@@ -15,7 +15,7 @@
 
   </head>
 
-  <body>
+  <body data-spy="scroll" data-offset="0" data-target="#myScrollspy">
 
     <header>
       <div class="navbar navbar-inverse navbar-fixed-top menu" role="navigation">
@@ -29,10 +29,10 @@
         </div>
         <div class="collapse navbar-collapse" align="center">
           <ul class="nav navbar-nav">
-            <li class="menuli"><a href="#">WHAT WE DO</a></li>
-            <li class="menuli"><a href="#about">WHO WE ARE</a></li>
+            <li class="menuli"><a href="#whatwedo">WHAT WE DO</a></li>
+            <li class="menuli"><a href="#whoweare">WHO WE ARE</a></li>
             <li><img src="img/logo_80x80.png"></li>
-            <li class="menuli"><a href="#contact">OUR WORK</a></li>
+            <li class="menuli"><a href="#ourwork">OUR WORK</a></li>
             <li class="menuli"><a href="#contact">CONTACT US</a></li>
           </ul>
         </div><!--/.nav-collapse -->
@@ -42,7 +42,7 @@
 
 
   
-    <div class="what-we-do">
+    <div class="what-we-do" id="whatwedo">
        <div class="bg-orange"></div>
         <div class="container content1">
             <div class="volcano"><b>VOLCANO VIET NAM</b></div>
@@ -67,7 +67,7 @@
 
   <div class="ngan1"></div>
 
-  <div class="who-we-are">
+  <div class="who-we-are" id="whoweare">
     <div class="container content1">
       <img class="imgweare" src="img/BG whoweare.png"></img>
       <p>Volcano is a team of young and ambitious entrepreneurs, who have fire in the eyes and hunger in the heart. Together we build a team to develop new products and solve life problems. We hope to turn innovative ideas into real actions and create true values for as many people as we can.</p>
@@ -102,7 +102,7 @@
     </div>
   </div>
 
-  <div class="ngan2"></div>
+  <div class="ngan2" id="ourwork"></div>
 
   <div class="row backgroundOurWork">
       <div class="container content">
@@ -204,7 +204,7 @@
 
     <div class="ngan3"></div>
 
-    <div class="row backgroundContact">
+    <div class="row backgroundContact" id="contact">
       <div class="container content">
         <div class="row">
           <div class="col-md-6" align="right">
@@ -214,22 +214,22 @@
             <a href="#"><img src="img/img-contact-phone-icon.png"></a>
           </div>
         </div>
-        <div class="row" align="center">
-          <div class="col-md-9 contact-form content">
-            <form id="contact" method="post" class="form" role="form">
+        <div class="row">
+          <div class="col-md-9 contact-form content" text-align="center">
+            <form id="contacts" method="post" class="form" role="form">
               <div class="row">
-                <div class="col-xs-6 col-md-6 form-group">
-                  <input class="form-control" id="name" name="name" placeholder="Name" type="text" required autofocus />
+                <div class="col-xs-7 col-md-7 form-group">
+                  <textarea class="form-control" id="message" name="mess-contact" placeholder="Send us a message here." rows="5" style="width: 500px; height: 190px;border-radius: 20px;"></textarea>
                 </div>
-                <div class="col-xs-6 col-md-6 form-group">
-                  <input class="form-control" id="email" name="email" placeholder="Email" type="email" required />
-                </div>
-              </div>
-              <textarea class="form-control" id="message" name="message" placeholder="Message" rows="5"></textarea>
-                <br />
-              <div class="row">
-                <div class="col-xs-12 col-md-12 form-group">
-                  <button class="btn btn-primary pull-right" type="submit">Submit</button>
+                <div class="col-xs-2 col-md-2 form-group">
+                  <input class="form-control" id="name" name="name" placeholder="Your name" type="text" required autofocus style="border-radius: 10px;width: 140px;
+height: 70px;" />
+                  <br class="br">
+                  <input class="form-control" id="email" name="email" placeholder="Your email address" type="email" required style="border-radius: 10px;width: 140px;
+height: 70px;"/>
+                  <br class="br">
+                  <button class="btn btn-primary" type="submit" style="border-radius: 10px;width: 140px;
+height: 50px;">Submit</button>
                 </div>
               </div>
             </form>
