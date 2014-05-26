@@ -1,8 +1,17 @@
+.webwidth{
+	width: 1349px;
+}
 .backgroundOurWork {
 	background-image:url("img/bg1.png");
+	width: 1364px;
 }
 .backgroundContact {
 	background-image:url("img/bg2.png");
+	width: 1364px;
+}
+.navbar-inverse 
+{
+	border-color: #373737;
 }
 .content {
 	margin-top: 20px;
@@ -16,6 +25,7 @@
 }
 .menu {
 	background-color: #373737;
+	width: 1349px;
 }
 .navbar .nav {
   float:none;
@@ -40,11 +50,16 @@ li {
 .menuli:hover {
 	background-color: #B42D2D;
 }
-
-
+p
+{
+	padding: 30px;
+	font-size: 14px;
+	color: #999;
+}
 footer{
 	background: #373737;
-	color: #FFF;
+	height: 150px;
+	text-align: center;
 }
 .contact-form {
     margin-top:70px;
@@ -179,7 +194,7 @@ footer{
 	z-index: 1;
 	position: absolute;
 }
-p
+.classp
 {
 	font-size: 20px;
 	color: white;
@@ -241,7 +256,7 @@ p
 
 .ngan2
 {
-	height: 60px;
+	height: 90px;
 	background-image: -webkit-gradient(linear, 0% top, 100% top, from(#B43C2D), to(#B42D2D));
   background-image: -webkit-linear-gradient(top, color-stop(#B43C2D 0%), color-stop(#B42D2D 100%));
   background-image: -moz-linear-gradient(top, #B43C2D 0%, #B42D2D 100%);
@@ -250,7 +265,7 @@ p
 
 .ngan3
 {
-	height: 60px;
+	height: 90px;
 	background-image: -webkit-gradient(linear, 0% top, 100% top, from(#B42D2D), to(#7D2828));
   background-image: -webkit-linear-gradient(top, color-stop(#B42D2D 0%), color-stop(#7D2828 100%));
   background-image: -moz-linear-gradient(top, #B42D2D 0%, #7D2828 100%);
@@ -259,7 +274,7 @@ p
 
 .ngan4
 {
-	height: 60px;
+	height: 90px;
 	background-image: -webkit-gradient(linear, 0% top, 100% top, from(#7D2828), to(#553232));
   background-image: -webkit-linear-gradient(top, color-stop(#7D2828 0%), color-stop(#553232 100%));
   background-image: -moz-linear-gradient(top, #7D2828 0%, #553232 100%);
